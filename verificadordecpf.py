@@ -1,11 +1,11 @@
-import re
-import sys
-import os
+import re # Importei re que serve
+import sys # Importei o sys
+import os # Importei o os 
 
-def validarCPF():
-    try:
-        entrada = input('CPF [746.824.890-70]: ')
-        cpf = re.sub(r'[^0-9]','',entrada)
+def validarCPF(): # Crie uma função.
+    try: # Se não de eros ele vai exibir isso. 
+        entrada = input('CPF [746.824.890-70]: ') # pegando a informação do usuario.
+        cpf = re.sub(r'[^0-9]','',entrada) # 
 
         entrada_e_sequencial = entrada == entrada[0] * len(entrada)
 
@@ -43,5 +43,5 @@ def validarCPF():
     except:
         print('É permitido apenas numeors!')
  
-    validarCPF()
-validarCPF()
+    validarCPF() # Chamei a função para inicia que der o resultado.
+validarCPF() # Chamei novamente para iniciar o looping.
